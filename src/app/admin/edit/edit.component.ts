@@ -53,7 +53,8 @@ export class EditComponent {
       email: data.email,
       contact: data.contact,
       centre: data.centre,
-      OPDtime: data.OPDtime,
+      OPDtimeAM: data.OPDtimeAM,
+      OPDtimePM: data.OPDtimePM,
       OPDdays: data.OPDdays,
       gender: data.gender
     }

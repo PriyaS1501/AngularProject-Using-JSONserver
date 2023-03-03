@@ -131,10 +131,13 @@
                             </div>
 
                             <div class="col-md-5 m-2">
-                                <label for="">OPD Time <small>(am-pm)</small>:</label>
-                                <input type="text" name="OPDtime" class="form-control" formControlName="OPDtime"
-                                    placeholder="Enter..." required
-                                    [ngClass]="{'is-invalid' : submitted && doctors.get('OPDtime').errors}">
+                                <label for="">OPD Time:</label><br>
+                                <input type="number" name="OPDtimeAM" class="form-control num"
+                                    formControlName="OPDtimeAM" placeholder="AM" required
+                                    [ngClass]="{'is-invalid' : submitted && doctors.get('OPDtimeAM').errors}">
+                                <input type="number" name="OPDtimePM" class="form-control num"
+                                    formControlName="OPDtimePM" placeholder="PM" required
+                                    [ngClass]="{'is-invalid' : submitted && doctors.get('OPDtimePM').errors}"> 
                                 <div *ngIf="submitted && doctors.get('OPDtime').errors?.['required']"
                                     class="invalid-feedback">
                                     OPD Timing is required

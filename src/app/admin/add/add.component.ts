@@ -29,7 +29,8 @@ export class AddComponent implements OnInit {
       email :data.email,
       contact:data.contact,
       centre:data.centre,
-      OPDtime:data.OPDtime,
+      OPDtimeAM:data.OPDtimeAM,
+      OPDtimePM:data.OPDtimePM,
       OPDdays:data.OPDdays,
       gender:data.gender
     } 
@@ -52,7 +53,8 @@ this.service.addRecord(this.tableName,docObj). subscribe(()=>{
         email: ['', [Validators.required, Validators.pattern(regExEmail)]],
         contact: ['', [Validators.required, Validators.pattern(regExContact)]],
         centre: ['', [Validators.required]],
-        OPDtime: ['', [Validators.required]],
+        OPDtimeAM: ['', [Validators.required]],
+        OPDtimePM: ['', [Validators.required]],
         OPDdays: ['', [Validators.required]],
         gender: ['', [Validators.required]]
 

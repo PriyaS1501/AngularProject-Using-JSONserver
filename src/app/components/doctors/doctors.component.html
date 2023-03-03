@@ -22,7 +22,7 @@
                             <p>{{d.speciality}}</p>
                         </div>
                         <h4>Clinical OPD</h4>
-                        <h4>{{d.OPDtime}}</h4>
+                        <h4>{{d.OPDtimeAM}} AM to {{d.OPDtimePM}} PM</h4>
                         <ul>
                             <li><a href="#" routerLink="/book-an-appointment">Get Appointment</a></li>
 
@@ -49,7 +49,7 @@
                                             <h5>Experience : {{d.experience}} Years</h5>
                                             <p>{{d.about}}</p>
                                             <hr>
-                                            <h6>Clinical OPD timings : {{d.OPDtime}}</h6>
+                                            <h6>Clinical OPD timings : {{d.OPDtimeAM}} AM to {{d.OPDtimePM}} PM</h6>
                                             <h6>Clinical OPD Days : {{d.OPDdays}}</h6>
                                             <h6>Clinical OPD Centre : {{d.centre}}</h6>
                                         </div>

@@ -46,7 +46,7 @@
                                 <tr *ngFor="let c of centresData  | filter:term |orderBy: order :reverse | paginate: { itemsPerPage: 2, currentPage: p }">
                                     <td>{{c.id}}</td>
                                     <td>{{c.name}}</td>
-                                    <td>{{c.description}}</td>
+                                    <td>{{ (c.description.length>40)? (c.description | slice:0:40)+'...':(c.description) }}</td>
                                     <td>{{c.address}}</td>
                                     <td>{{c.cemail}}</td>
                                     <td>{{c.ccontact}}</td>

@@ -264,3 +264,8 @@ footer ul li a {
     text-decoration: none;
     color: #212529;
 }
+.num{
+    width: 49%;
+    float: left;
+    margin: 0 1% 0 0;
+}

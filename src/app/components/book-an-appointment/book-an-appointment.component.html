@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="apointment-form">
                     <form (ngSubmit)="addData(bookappointment.value)" [formGroup]="bookappointment">
-                        
+
                         <div class="row">
                             <div class="col-md-5 m-2">
                                 <label for=""> Full Name :</label>
@@ -97,6 +97,19 @@
                             </div>
                             <div class="col-md-5 m-2">
                                 <label>Preferred way of contacting</label><br>
+                                <div *ngFor="let item of _contactslist">
+                                    <div>
+                                        <input type="checkbox" name="{{item.name}}" (change)="onChange()" value="{{item.name}}"
+                                            [(ngModel)]="item.isselected" formControlName="contactway"
+                                            [ngClass]="{'is-invalid': submitted && bookappointment.get('contactway').errors}">
+                                        {{item.name}}
+                                    </div>
+
+                                </div>
+                                <div *ngIf="submitted && this.bookappointment.controls['contactway'].errors?.['required']"
+                                    class="invalid-feedback">
+                                    This field is required
+                                </div>
                                 <!-- ONLINE  -->
                                 <!-- <div *ngFor="let contact of contactsarray; let i = index;">
                                     <label for="">
@@ -111,7 +124,7 @@
                                 </div> -->
 
                                 <!-- TAUGHT BY SIR -->
-                                 <input type="checkbox" name="contactwayphone" formControlName="contactway"
+                                <!-- <input type="checkbox" name="contactwayphone" formControlName="contactway"
                                     value="Phone"
                                     [ngClass]="{'is-invalid': submitted && bookappointment.get('contactway').errors}">
                                 Phone
@@ -119,9 +132,9 @@
                                 <input type="checkbox" name="contactwayemail" formControlName="contactway"
                                     value="Email"
                                     [ngClass]="{'is-invalid': submitted && bookappointment.get('contactway').errors}">
-                                Email 
+                                Email  -->
 
-                                    <!-- ONLINE  -->
+                                <!-- ONLINE  -->
                                 <!-- <div *ngFor="let way of contactway; let i=index">
                                     <label>
                                         <input type="checkbox" [value]="way.value" (change)="onCheckboxChange($event)" name="contactway"
@@ -133,6 +146,8 @@
                                         class="invalid-feedback">
                                         This field is required
                                 </div>-->
+
+
                             </div>
                             <div class="col-md-5 m-2">
                                 <label for="">Select Preferred Center * :</label>

@@ -58,11 +58,11 @@
                                     <td>{{d.qualification}}</td>
                                     <td>{{d.speciality}}</td>
                                     <td>{{d.experience}}</td>
-                                    <td>{{d.about}}</td>
+                                    <td>{{ (d.about.length>40)? (d.about | slice:0:40)+'...':(d.about) }} </td> 
                                     <td>{{d.email}}</td>
                                     <td>{{d.contact}}</td>
                                     <td>{{d.centre}}</td>
-                                    <td>{{d.OPDtime}}</td>
+                                    <td>{{d.OPDtimeAM}} AM to {{d.OPDtimePM}} PM</td>
                                     <td>{{d.OPDdays}}</td>
                                     <td>{{d.gender}}</td>
                                     <td><button class="btn btn-outline-success btn-sm"

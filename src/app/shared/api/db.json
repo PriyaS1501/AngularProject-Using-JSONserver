@@ -9,8 +9,9 @@
       "about": "She has performed 3000 SICS including topical SICS and 50 ECCE.\nShe also specializes in refractive surgeries like LASIK, PRK, Phakic IOL (ICL/IPCL), Multifocal IOL, toric IOL, Trifocal IOL",
       "email": "swapna@ymail.com",
       "contact": "8976777210",
-      "centre": "Mumbai",
-      "OPDtime": "10 am To 8 pm",
+      "centre": "VASHI",
+      "OPDtimeAM": "10",
+      "OPDtimePM": "8",
       "OPDdays": "Mon, Thu",
       "gender": "female"
     },
@@ -24,7 +25,8 @@
       "email": "prasad@gmail.com",
       "contact": "8976543210",
       "centre": "Navi Mumbai",
-      "OPDtime": "10AM to 8PM",
+      "OPDtimeAM": "10",
+      "OPDtimePM": "8",
       "OPDdays": "Mon, Tue, Wed",
       "gender": "male"
     },
@@ -38,7 +40,8 @@
       "email": "Brijlata22@gmail.com",
       "contact": "8784321467",
       "centre": "Navi Mumbai",
-      "OPDtime": "10 am To 8 pm",
+      "OPDtimeAM": "10",
+      "OPDtimePM": "8",
       "OPDdays": "Mon, Thu, Fri",
       "gender": "male"
     }
@@ -81,40 +84,28 @@
       "comment": "Nulla consequat massa quis enim. Cum sociis"
     },
     {
-      "fname": "Swapnil babar",
-      "emailid": "swapnil@gmail.com",
-      "acontact": "1111222211",
-      "doa": "2023-02-26",
-      "city": "pune",
+      "fname": "wewc retete",
+      "emailid": "erwevr@gmail.com",
+      "acontact": "1111111111",
+      "doa": "2023-03-02",
+      "city": "rvtrtr",
       "gender": "male",
-      "preferredcentre": "Mumbai",
+      "preferredcentre": "VASHI",
       "contactway": true,
-      "comment": "fvgbhgtbgfbfbgfgb",
+      "comment": "dterg ",
       "id": 223
     },
     {
-      "fname": "",
-      "emailid": "",
-      "acontact": "",
-      "doa": "",
-      "city": "",
-      "gender": "",
-      "preferredcentre": "",
-      "contactway": true,
-      "comment": "",
+      "fname": "edr rfrf",
+      "emailid": "qq@gmail.com",
+      "acontact": "1111222233",
+      "doa": "2023-03-11",
+      "city": "dfrf",
+      "gender": "male",
+      "preferredcentre": "VASHI",
+      "contactway": false,
+      "comment": "dcfrfrdr",
       "id": 224
-    },
-    {
-      "fname": "",
-      "emailid": "",
-      "acontact": "",
-      "doa": "",
-      "city": "",
-      "gender": "",
-      "preferredcentre": "",
-      "contactway": true,
-      "comment": "",
-      "id": 225
     }
   ]
 }

@@ -11,15 +11,28 @@ import { regExFullName, regExEmail, regExContact } from 'src/app/shared/common-d
   styleUrls: ['./book-an-appointment.component.css']
 })
 export class BookAnAppointmentComponent implements OnInit {
+  constructor(private formBuilder: FormBuilder, private service: GlobalService, private router: Router) {
+  }
+
   bookappointment: any
   submitted: boolean = false
   tableName = "Appointments"
   tableName1 = "Centres"
   centresData: any
+  isselected:any
 
+  _contactslist: contacts[]
+  getcontacts() {
+    this._contactslist = [
+      { id: 1, name: "Email", isselected: false },
+      { id: 2, name: "Phone", isselected: false }
+    ]
+  }
+  onChange() {
+    console.log(this._contactslist)
+  }
 
   addData(data: any) {
-
     const centreObj = {
       fname: data.fname,
       emailid: data.emailid,
@@ -36,13 +49,9 @@ export class BookAnAppointmentComponent implements OnInit {
       alert("Appointment booked sucessfully, We will call you back shortly. Thank You!!")
       this.router.navigate(['/home'])
     })
-
   }
-
-  constructor(private formBuilder: FormBuilder, private service: GlobalService, private router: Router) {
-  }
-
   ngOnInit(): void {
+    this.getcontacts()
     this.bookappointment = this.formBuilder.group(
       {
         fname: ['', [Validators.required, Validators.pattern(regExFullName)]],
@@ -58,6 +67,15 @@ export class BookAnAppointmentComponent implements OnInit {
     this.service.getRecords(this.tableName1).subscribe((res) => {
       this.centresData = res
     })
+
   }
+ 
+  
+}
+
+class contacts {
+  id: number
+  name: string
+  isselected: boolean
 }
 

@@ -15,7 +15,7 @@
                     <button class="btn btn-outline-success btn-sm " routerLink="/admin/dashboard"
                         style="float: right;"><i class="fa fa-arrow-circle-left"></i>
                         Back to Dashboard</button>
-                    
+
                 </div>
             </div>
             <hr>
@@ -132,9 +132,12 @@
                             </div>
 
                             <div class="col-md-5 m-2">
-                                <label for="">OPD Time :</label>
-                                <input type="text" name="OPDtime" class="form-control" #refOPDtime="ngModel"
-                                    [ngModel]="docObj?.OPDtime" placeholder="Enter..." required
+                                <label for="">OPD Time :</label><br>
+                                <input type="number" name="OPDtimeAM" class="form-control num" #refOPDtime="ngModel"
+                                    [ngModel]="docObj?.OPDtimeAM" placeholder="AM" required
+                                    [ngClass]="{'is-invalid' : submitted && refOPDtime.errors}">
+                                <input type="number" name="OPDtimePM" class="form-control num" #refOPDtime="ngModel"
+                                    [ngModel]="docObj?.OPDtimePM" placeholder="PM" required
                                     [ngClass]="{'is-invalid' : submitted && refOPDtime.errors}">
                                 <div *ngIf="submitted && refOPDtime.errors?.['required']" class="invalid-feedback">
                                     OPD Timing is required
