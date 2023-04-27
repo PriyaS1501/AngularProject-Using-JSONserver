@@ -39,3 +39,4 @@ import { CentresComponent } from './components/centres/centres.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
